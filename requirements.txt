@@ -1,0 +1,9 @@
+Flask 
+numpy
+pandas
+nltk
+matplotlib
+seaborn
+tqdm
+transformers
+scipy
