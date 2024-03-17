@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from nltk.sentiment import SentimentIntensityAnalyzer
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 
 app = Flask(__name__)
