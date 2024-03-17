@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process 2 Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-container {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        h2 {
+            margin-top: 15px;
+            color: black;
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: gray;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Main Container for Overall Information -->
+        <div class="box">
+            <h2>Total Reviews</h2>
+            <p>{{ num_pos + num_neg + num_neu }}</p>
+            <h2>Final Sentiment</h2>
+            <p>{{ final_sentiment }}</p>
+            <h2>Sentiment Score</h2>
+            <p>{{ final_sentiment_score }}</p>
+        </div>
+
+        <!-- Container for Review Categories -->
+        <div class="box review-container">
+            <h2>Review Categories</h2>
+
+            <!-- Positive Reviews -->
+            <div class="review-container">
+                <h3>Positive Reviews: <span style="color: gray;">{{ num_pos }}</span></h3>
+                <p><a href="/show_reviews/positive">View Positive Reviews</a></p>
+            </div>
+
+            <!-- Negative Reviews -->
+            <div class="review-container">
+                <h3>Negative Reviews: <span style="color: gray;">{{ num_neg }}</span></h3>
+                <p><a href="/show_reviews/negative">View Negative Reviews</a></p>
+            </div>
+
+            <!-- Neutral Reviews -->
+            <div class="review-container">
+                <h3>Neutral Reviews: <span style="color: gray;">{{ num_neu }}</span></h3>
+                <p><a href="/show_reviews/neutral">View Neutral Reviews</a></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

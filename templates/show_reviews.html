@@ -1,0 +1,26 @@
+<!-- templates/show_reviews.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Reviews</title>
+    <style>
+        .review {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ title }}</h1>
+        {% for review in reviews %}
+            <div class="review">{{ review }}</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 27px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        
+
+        h1 {
+            text-align: center;
+            color: #000; /* Dark black color */
+            margin-top: 0;
+            padding: 20px;
+        }
+
+        .box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .text-box {
+            background-color: #888; /* Grey color */
+            color: #000; /* Dark black color */
+        }
+
+        .file-box {
+            background-color: #888; /* Grey color */
+            color: #000; /* Dark black color */
+        }
+
+        p {
+            color: #000; /* Dark black color */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        
+
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Vader Sentiment Analysis App</h1>
+    <div class="container" onclick="window.location.href='/index'">
+        <!-- Box for analyzing text -->
+        <div class="box text-box">
+            <p>This app analyzes the sentiment of text data.</p>
+            <a href="/index">Analyze Text</a> <!-- Link to the text analysis page -->
+        </div>
+    </div>
+
+    <div class="container" onclick="window.location.href='/process2'">
+        <!-- Box for uploading CSV file -->
+        <div class="box file-box">
+            <p>Upload a CSV file for sentiment analysis</p>
+            <a href="/process2">Upload CSV</a> <!-- Link to the upload page -->
+        </div>
+    </div>
+</body>
+</html>
