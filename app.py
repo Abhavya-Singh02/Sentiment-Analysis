@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import pandas as pd
 
+nltk.download('vader_lexicon')
 app = Flask(__name__)
 sia = SentimentIntensityAnalyzer()
 
